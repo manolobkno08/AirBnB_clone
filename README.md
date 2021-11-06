@@ -17,4 +17,18 @@ project
 deserialization of future instances... atributes: id, created_at. updated_at
 metodos save(), to_json
 - engine:
-- file_storage.py:this file contains the file storage class
+- file_storage.py:this file contains the file storage class.
+
+## description of the command interpreter
+
+Basic Usage of The Console
+
+| commands | usage | functionality |
+------ |------ |------ |
+| create | create <clase> |creates new object a new user,plece |
+| help | help |display all commands available |
+| quit | quit |exists|
+| all | user.all() |display all objectsin class|
+| destroy | user.destroy(123)|destroys specified object|
+|show | user.sow(123) |shows a specific instance|
+|update| user. update(123,{name :name@mail.com})|updates attributes of an object|
