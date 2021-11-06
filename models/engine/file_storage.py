@@ -13,6 +13,7 @@ class FileStorage():
     """Initialization"""
     __file_path = 'file.json'
     __objects = {}
+
     classes = {
         "BaseModel": BaseModel
     }

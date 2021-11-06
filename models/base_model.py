@@ -42,7 +42,6 @@ class BaseModel():
 
     def to_dict(self):
         """Return Dictionary"""
-        format = "%Y-%m-%dT%H:%M:%S.%f"
 
         dictionary = {}
         dictionary = self.__dict__.copy()

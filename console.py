@@ -89,8 +89,6 @@ class HBNBCommand(cmd.Cmd):
         """Give all instances"""
         args = args.split(' ')
         new_list = []
-        # for key, value in self.__objects.items():
-        #     new_json[key] = value.to_dict()
         if len(args[0]) == 0:
             for obj in models.storage.all().values():
                 new_list.append(obj.__str__())
@@ -102,6 +100,34 @@ class HBNBCommand(cmd.Cmd):
             print(new_list)
         else:
             print("** class doesn't exist **")
+
+    def do_update(self, args):
+        """Update instances"""
+        args = args.split()
+        if len(args) == 0:
+            print("** class name missing **")
+            return
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+        if len(args) == 2:
+            print("** attribute name missing **")
+            return
+        if len(args) == 3:
+            print("** value missing **")
+            return
+
+        if args[0] not in HBNBCommand.classes:
+            print("** class doesn't exist **")
+            return
+
+        objs = models.storage.all()
+        for id_obj in objs.keys():
+            if id_obj[0] == args[1]:
+                setattr(objs[id_obj], args[2], args[3])
+                models.storage.save()
+                return
+        print("** no instance found **")
 
 
 if __name__ == '__main__':
