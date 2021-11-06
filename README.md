@@ -9,9 +9,12 @@ In this segment we create a shell to manage the AirBnB website objects.
 
 ## files and directorioes
 
-- models
-- console.py
-- tests
-- base_model.py: atributes: id, created_at. updated_at  metodos save(), to_json
-- engine
-- file_storage.py
+- models:the directory that will contain all the classes used for the whole
+project
+- console.py:this is the file that will contain the main console.
+- tests:this file contains unit tests
+- base_model.py:is responsible for the initialization, serialization and
+deserialization of future instances... atributes: id, created_at. updated_at
+metodos save(), to_json
+- engine:
+- file_storage.py:this file contains the file storage class
