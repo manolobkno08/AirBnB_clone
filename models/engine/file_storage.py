@@ -33,8 +33,8 @@ class FileStorage():
     def save(self):
         """Serializes object"""
         new_json = {}
-        for key in self.__objects:
-            new_json[key] = self.__objects[key].to_dict()
+        for key, value in self.__objects.items():
+            new_json[key] = value.to_dict()
         with open(self.__file_path, 'w') as f:
             f.write(json.dumps(new_json))
 
@@ -45,7 +45,7 @@ class FileStorage():
             with open(self.__file_path, 'r') as f:
                 new_dic = json.loads(f.read())
                 for key, value in new_dic.items():
-                    self.__objects[key] = self.dic_class[value["__class__"]](
+                    self.__objects[key] = self.classes[value["__class__"]](
                         **value)
         except:
             pass

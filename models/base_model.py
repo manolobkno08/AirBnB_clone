@@ -48,9 +48,7 @@ class BaseModel():
         dictionary = self.__dict__.copy()
         dictionary['__class__'] = self.__class__.__name__
 
-        if "created_at" in dictionary:
-            dictionary["created_at"] = self.created_at.strftime(format)
-        if "updated_at" in dictionary:
-            dictionary["updated_at"] = self.updated_at.strftime(format)
+        dictionary["created_at"] = self.created_at.isoformat()
+        dictionary["updated_at"] = self.updated_at.isoformat()
 
         return dictionary
