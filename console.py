@@ -4,6 +4,7 @@ import cmd
 import os
 import shlex
 from models.base_model import BaseModel
+from models.user import User
 import models
 """
 Admin Console
@@ -16,7 +17,8 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     classes = {
-        "BaseModel": BaseModel
+        "BaseModel": BaseModel,
+        "User": User
     }
 
     def do_EOF(self, args):
@@ -46,7 +48,7 @@ class HBNBCommand(cmd.Cmd):
         elif args[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
         else:
-            instance = BaseModel()
+            instance = self.classes[args[0]]()
             print(instance.id)
             models.storage.save()
 

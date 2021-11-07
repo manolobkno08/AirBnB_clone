@@ -2,6 +2,7 @@
 
 import json
 from models.base_model import BaseModel
+from models.user import User
 
 """
 File Storage contains code related to file
@@ -21,12 +22,9 @@ class FileStorage():
     __objects = {}
 
     classes = {
-        "BaseModel": BaseModel
+        "BaseModel": BaseModel,
+        "User": User
     }
-
-    def __init__(self, *args, **kwargs):
-        """Constructor method"""
-        pass
 
     def all(self):
         """
@@ -66,5 +64,5 @@ class FileStorage():
                 for key, value in new_dic.items():
                     self.__objects[key] = self.classes[value["__class__"]](
                         **value)
-        except:
+        except FileNotFoundError:
             pass
