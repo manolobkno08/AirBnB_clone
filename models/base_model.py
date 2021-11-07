@@ -4,16 +4,20 @@ import datetime
 import models
 
 """
-Base Model Class
-
+Base Model Class for all models will contain id
+created_at and updated
 """
 
 
 class BaseModel():
-    """Initialization"""
+    """
+    Initialization of class BaseModel
+    """
 
     def __init__(self, *args, **kwargs):
-        """Constructor method"""
+        """
+        Constructor method
+        """
 
         if kwargs:
             kwargs["created_at"] = datetime.datetime.strptime(
@@ -31,17 +35,24 @@ class BaseModel():
             models.storage.new(self)
 
     def __str__(self):
-        """String representation"""
+        """
+        method return String representation
+        """
         return ("[{}] ({}) {}".format(str(type(self).__name__),
                                       self.id, str(self.__dict__)))
 
     def save(self):
-        """Update attribute"""
+        """
+        method to Update attrb updated_at
+        """
         self.updated_at = datetime.datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """Return Dictionary"""
+        """
+        method to return a dict containing all
+        key/value of__dict__
+        """
 
         dictionary = {}
         dictionary = self.__dict__.copy()
