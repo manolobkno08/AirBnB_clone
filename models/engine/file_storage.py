@@ -4,13 +4,19 @@ import json
 from models.base_model import BaseModel
 
 """
-File Storage Class
-
+File Storage contains code related to file
+storage for the airbnb clone project
+a json data format for serealizacion and
+deserialization of data.
 """
 
 
 class FileStorage():
-    """Initialization"""
+    """
+    this class serializes instances to
+    a json file and deserializaes json
+    file to instances
+    """
     __file_path = 'file.json'
     __objects = {}
 
@@ -23,16 +29,25 @@ class FileStorage():
         pass
 
     def all(self):
-        """Return Dictionary"""
+        """
+        public instance method to return
+        the dictionary __object
+        """
         return self.__objects
 
     def new(self, obj):
-        """Set <obj class name>.id"""
+        """
+        public instance method that sets in
+        __objects with key id
+        """
         key = obj.__class__.__name__ + "." + obj.id
         self.__objects[key] = obj
 
     def save(self):
-        """Serializes object"""
+        """
+        public instance that serializes __objects
+        to the json file
+        """
         new_json = {}
         for key, value in self.__objects.items():
             new_json[key] = value.to_dict()
@@ -40,7 +55,10 @@ class FileStorage():
             f.write(json.dumps(new_json))
 
     def reload(self):
-        """Deserialize object"""
+        """
+        Deserialize json file __objects
+        if file exists
+        """
         new_dic = {}
         try:
             with open(self.__file_path, 'r') as f:
