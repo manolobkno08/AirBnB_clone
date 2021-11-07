@@ -32,7 +32,8 @@ class BaseModel():
 
     def __str__(self):
         """String representation"""
-        return f'[{self.__class__.__name__}] ({self.id}) {self.__dict__}'
+        return ("[{}] ({}) {}".format(str(type(self).__name__),
+                                      self.id, str(self.__dict__)))
 
     def save(self):
         """Update attribute"""
@@ -43,7 +44,6 @@ class BaseModel():
         """Return Dictionary"""
 
         dictionary = {}
-        dictionary =str(type(self).__name__)
         dictionary = self.__dict__.copy()
         dictionary['__class__'] = self.__class__.__name__
 
