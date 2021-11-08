@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-Unittest for base_model
+Unittest for engine
 """
 import unittest
-from models.base_model import BaseModel
-base_model = __import__('base_model').__init__
+from models.engine.file_storage import FileStorage
+file_storage = __import__('file_storage').__init__
 
 
 class Testinit(unittest.TestCase):
     """
-    base_model TestCase
+    Engine TestCase
     """
 
 
