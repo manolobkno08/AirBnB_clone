@@ -33,23 +33,16 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def do_EOF(self, args):
-        """Quit command to exit the program
-        """
+        """Exit console"""
         return True
 
     def do_quit(self, args):
-        """Quit command to exit the program
-        """
+        """Quit command to exit the program"""
         return True
-
-    def do_clear(self, args):
-        """Clear Window
-        """
-        os.system('clear')
 
     def emptyline(self):
         """Empty Line"""
-        pass
+        return False
 
     def do_create(self, args):
         """Create instances"""
