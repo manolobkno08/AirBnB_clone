@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
+"""
+Admin Console
+"""
+
 import cmd
-import os
 import shlex
 import models
 from models.base_model import BaseModel
@@ -11,11 +14,6 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-
-"""
-Admin Console
-
-"""
 
 
 class HBNBCommand(cmd.Cmd):
@@ -33,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def do_EOF(self, args):
-        """Exit console"""
+        """Exit loop console\n"""
         return True
 
     def do_quit(self, args):
@@ -41,11 +39,11 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """Empty Line"""
+        """Empty Line method\n"""
         return False
 
     def do_create(self, args):
-        """Create instances"""
+        """Create new instances\n"""
         args = args.split(' ')
         if len(args[0]) == 0:
             print("** class name missing **")
@@ -57,7 +55,7 @@ class HBNBCommand(cmd.Cmd):
             models.storage.save()
 
     def do_show(self, args):
-        """Print instances"""
+        """Print specific instances\n"""
         args = args.split(' ')
         if len(args[0]) == 0:
             print("** class name missing **")
@@ -75,7 +73,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_destroy(self, args):
-        """Destroy instances by id"""
+        """Destroy instances by id\n"""
         args = args.split(' ')
         if len(args[0]) == 0:
             print("** class name missing **")
@@ -93,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_all(self, args):
-        """Give all instances"""
+        """Give all instances\n"""
         args = args.split(' ')
         new_list = []
         if len(args[0]) == 0:
@@ -109,7 +107,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_update(self, args):
-        """Update instances"""
+        """Update instances console\n"""
         args = shlex.split(args)
         if len(args) == 0:
             print("** class name missing **")
@@ -135,4 +133,5 @@ class HBNBCommand(cmd.Cmd):
 
 
 if __name__ == '__main__':
+    """Initiallizate loop main"""
     HBNBCommand().cmdloop()
