@@ -3,8 +3,9 @@
 Unittest for User
 """
 import unittest
+from models import user
 from models.user import User
-base_model = __import__('user').__init__
+user = __import__('user').__init__
 
 
 class Testinit(unittest.TestCase):
