@@ -2,6 +2,9 @@
 
 """
 Admin Console
+Just for fun
+AirBnB
+
 """
 
 import cmd
@@ -17,8 +20,12 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """Interpreter"""
-    prompt = "(hbnb) "
+    """
+    Commands Interpreter
+    Just for fun
+
+    """
+    prompt = '(hbnb) '
 
     classes = {
         "BaseModel": BaseModel,
@@ -133,5 +140,7 @@ class HBNBCommand(cmd.Cmd):
 
 
 if __name__ == '__main__':
-    """Initiallizate loop main"""
+    """
+    Initiallizate loop main
+    """
     HBNBCommand().cmdloop()
