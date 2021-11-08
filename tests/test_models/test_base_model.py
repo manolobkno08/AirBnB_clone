@@ -1,8 +1,13 @@
-# check all my test
-# $ python3 -m unittest discover tests
+#!/usr/bin/python3
+"""
+Unittest for base_model
+"""
+import unittest
+from models.base_model import BaseModel
+base_model = __import__('base_model').__init__
 
-# check each one test
-# $ python3 -m unittest tests/test_models/test_base_model.py
 
-# non-interactive mode:
-# $ echo "python3 -m unittest discover tests" | bash
+class Testinit(unittest.TestCase):
+    """
+    base_model TestCase
+    """
