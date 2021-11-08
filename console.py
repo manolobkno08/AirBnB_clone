@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_quit(self, args):
-        """Quit command to exit the program"""
+        """Quit command to exit the program\n"""
         return True
 
     def emptyline(self):
