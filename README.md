@@ -20,11 +20,29 @@ In this case a command interpreter is created in this segment to manage objects 
 
 ## Files and directories
 [console.py](console.py) - Contains the entry point of the command interpreter. 
-* `EOF` - exits console 
-* `quit` - exits console
-* `<emptyline>` - does nothing
+* `EOF` - Exits console 
+* `quit` - Exits console
+* `<emptyline>` - Does nothing
 * `create` - Creates a new instance of object and saves it into .JSON file
 * `destroy` - Deletes an object from specific .JSON file
 * `show` - Prints the string representation of an specific object.
 * `all` - Prints all string representation of all available objects .
 * `update` - Updates an objects based on the class name and id.
+
+#### `models/`
+[base_model.py](/models/base_model.py) - The BaseModel class
+* `def __init__(self, *args, **kwargs)` - Initialization of class
+* `def __str__(self)` - String representation of the BaseModel class
+* `def save(self)` - Updates the attribute `updated_at` with the current datetime
+* `def to_dict(self)` - returns a dictionary containing all keys/values of the instance
+
+#### `/models/engine` serialization and deserialization :
+[file_storage.py](/models/engine/file_storage.py) - serializes and deserializes objects
+* `def all(self)` - returns the dictionary __objects
+* `def new(self, obj)` - sets in __objects the obj with key
+* `def save(self)` - serializes __objects to the JSON file
+* ` def reload(self)` -  deserializes the JSON file to __objects
+
+## Authors
+Sandra Lorena - [Twitter](https://twitter.com/alexa_orrico)  
+Manuel Gomez - [Twitter](https://twitter.com/ManoloGomez08)
