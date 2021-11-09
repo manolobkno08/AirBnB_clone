@@ -49,6 +49,10 @@ In this case a command interpreter is created in this segment to manage objects 
 
 <img src = "https://media.discordapp.net/attachments/870783334425440266/907636241401516042/unknown.png" width = "900"/>
 
+- Interactive mode
+
+<img src = "https://media.discordapp.net/attachments/870783334425440266/907640942507479060/unknown.png?width=911&height=490" width = "900"/>
+
 
 ## Authors
 * Sandra Lorena Hoyos Rodriguez - [Twitter](https://twitter.com/Sandra74398130)
