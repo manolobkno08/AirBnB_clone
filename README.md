@@ -29,7 +29,7 @@ In this case a command interpreter is created in this segment to manage objects 
 * `all` - Prints all string representation of all available objects .
 * `update` - Updates an objects based on the class name and id.
 
-#### `models/`
+#### `models/` main repository that contains the BaseModel class and inherits to other classes.
 [base_model.py](/models/base_model.py) - The BaseModel class
 * `def __init__(self, *args, **kwargs)` - Initialization of class
 * `def __str__(self)` - String representation of the BaseModel class
@@ -43,6 +43,8 @@ In this case a command interpreter is created in this segment to manage objects 
 * `def save(self)` - serializes __objects to the JSON file
 * ` def reload(self)` -  deserializes the JSON file to __objects
 
+## Examples of use
+
 ## Authors
-Sandra Lorena - [Twitter](https://twitter.com/alexa_orrico)  
-Manuel Gomez - [Twitter](https://twitter.com/ManoloGomez08)
+* Sandra Lorena Hoyos Rodriguez - [Twitter](https://twitter.com/Sandra74398130)
+* Manuel Alejandro Gomez - [Twitter](https://twitter.com/ManoloGomez08)
