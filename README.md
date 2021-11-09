@@ -4,31 +4,27 @@
 The goal of the project is to deploy a replica of Airbnb website using my
 server It will not implement all the features, just some of them to cover all
 the fundamental concepts.
-In this segment we create a shell to manage the AirBnB website objects.
+In this case a command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
 
+#### Functionalities:
+* Create a new object as User or Place
+* Retrieve an object from a file.
+* Update attributes of an object
+* Destroy an object
+
+## Installation
+* Clone this repository
+* Access AirBnb directory: `cd AirBnB_clone`
+* Run hbnb(interactively): `./console` and enter command
+* Run hbnb(non-interactively): `echo "<command>" | ./console.py`
 
 ## Files and directories
-
-- models: the directory that will contain all the classes used for the whole
-project
-- console.py: this is the file that will contain the main console.
-- tests: this folder contains unit tests
-- base_model.py: is responsible for the initialization, serialization and
-deserialization of future instances... atributes: id, created_at. updated_at
-metodos save(), to_json
-- engine: this folder contains the files that allow store tha data.
-- file_storage.py: this file contains the file storage class.
-
-## Description of the command interpreter
-
-Basic Usage - Interpreter
-
-| commands | usage | functionality |
------- |------ |------ |
-| create | create "class_name" |create new instances ex: create User |
-| help | help |display all commands available |
-| quit | quit |exit of interpreter|
-| all | all "class_name" |display all objects related to specific class ex: all User|
-| destroy | destroy "id" |destroy specified object by id|
-| show | show "id" |shows a specific instance|
-| update | update "class_name" "id" "new_key" "new_value"|updates attributes of an object|
+[console.py](console.py) - Contains the entry point of the command interpreter. 
+* `EOF` - exits console 
+* `quit` - exits console
+* `<emptyline>` - does nothing
+* `create` - Creates a new instance of object and saves it into .JSON file
+* `destroy` - Deletes an object from specific .JSON file
+* `show` - Prints the string representation of an specific object.
+* `all` - Prints all string representation of all available objects .
+* `update` - Updates an objects based on the class name and id.
