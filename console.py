@@ -8,6 +8,7 @@ AirBnB
 """
 
 import cmd
+import os
 import shlex
 import models
 from models.base_model import BaseModel
@@ -44,6 +45,11 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, args):
         """Quit command to exit the program\n"""
         return True
+
+    def do_clear(self, args):
+        """Clear Window
+        """
+        os.system('clear')
 
     def emptyline(self):
         """Empty Line method\n"""
