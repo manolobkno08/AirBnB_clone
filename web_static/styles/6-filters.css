@@ -9,7 +9,7 @@
 	align-items: center;
 }
 
-button {
+.button {
 	font-size: 18px;
 	color: #FFFFFF;
 	background-color: #FF5A5F;
@@ -22,7 +22,7 @@ button {
 	margin-left: auto;
 }
 
-button:hover {
+.button:hover {
 	opacity: 0.9;
 }
 
@@ -30,6 +30,35 @@ button:hover {
 .amenities {
 	height: 100%;
 	width: 25%;
+}
+
+.popover {
+	background-color: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	list-style-type: None;
+	padding: 10px 0px 20px 0px;
+	display: none;
+}
+
+.locations .popover li h2 {
+	font-size: 16px;
+	margin: 0;
+	padding: 10% 0% 5% 10%;
+}
+
+.locations:hover .popover,
+.amenities:hover .popover {
+	display: block;
+}
+
+.amenities .popover {
+	padding-top: 10%;
+}
+
+.popover li p {
+	padding-left: 20%;
+	margin: 0% 0% 3% 0%;
 }
 
 .locations {
