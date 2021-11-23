@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/3-footer.css" type="text/css">
     <link rel="stylesheet" href="styles/6-filters.css" type="text/css">
     <link rel="stylesheet" href="styles/7-places.css" type="text/css">
+    <link rel="stylesheet" href="styles/8-places.css" type="text/css">
     <link rel="icon" href="images/icon.png">
 </head>
 
@@ -60,7 +61,9 @@
 
         <section class="places">
             <h1>Places</h1>
-            <article><h2>My home</h2></article>
+            <article><h2>My home</h2>
+
+	    </article>
             <article><h2>Tiny house</h2></article>
             <article><h2>A suit</h2></article>
         </section>

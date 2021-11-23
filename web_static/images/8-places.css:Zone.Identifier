@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=vscode-file://vscode-app/c:/Users/juan_/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html
+HostUrl=file://wsl.localhost/Ubuntu-20.04/root/holbertonschool-higher_level_programming/AirBnB_clone/web_static/styles/8-places.css
